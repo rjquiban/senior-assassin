@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { jwtDecode } from "jwt-decode";
+import kill from "./assets/kill.png";
+import shield from "./assets/shield.png";
 
 const SEED = 1;
 
@@ -93,7 +95,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 class="text-center">Theta Tau Assassin</h1>
+      <header className="d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center">Theta Tau Spoon Assassin</h1>
+        <img className="image" src={shield}></img>
+      </header>
       <div>
         <p><u>Target Assignment</u></p>
         <p id="signInText">Sign in with your SCU account to get your target.</p>
@@ -111,10 +116,10 @@ function App() {
         <p>You have two ways to kill:</p>
         <ol>
           <li>
-            Spoon kills: Tap your target with a spoon in order to get them out. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”. See figure 1 below. This is a no witnesses kill, meaning that neither your target nor anyone in the fraternity can witness the kill being made in order for it to count. Even if you are not participating in spoon assassin or you’ve gotten killed by an assassin, you can still serve as a witness. 
+            Spoon kills: Tap your target with a spoon in order to get them out. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”. <b>This is a no witnesses kill</b>, meaning that neither your target nor anyone in the fraternity can witness the kill being made in order for it to count. Even if you are not participating in spoon assassin or you’ve gotten killed by an assassin, you can still serve as a witness. 
           </li>
           <li>
-            Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you cannot be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. This kill can have witnesses.
+            Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you <b>cannot</b> be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. <b>This kill can have witnesses</b>.
           </li>
         </ol>
         <p>All kills will be made on the honor system.</p>
@@ -138,6 +143,7 @@ function App() {
       <div>
         <p><u>What To Do After A Kill</u></p>
         <p>After killing your target, send a dramatic picture of your kill to Chris Tamayo and he will post it in the slack. Ask your target for the name of your new target (their target now becomes your new one).</p>
+        <img className="image" src={kill}></img>
       </div>
       
       <div>
