@@ -64,6 +64,10 @@ function App() {
         shuffleTargets(shuffled, SEED);
     
         const email = user.email;
+        if (shuffled.indexOf(email) === -1) {
+          return {name: "no one! You're not in the game :P"};
+        }
+
         const targetIndex = (shuffled.indexOf(email) + 1) % shuffled.length;
         const targetName = names[targetIndex];
         console.log("target: " +  targetName);
@@ -133,7 +137,7 @@ function App() {
           <li>A course-related lab (Independent/undergraduate research does not protect you)</li>
           <li>Places of worship/religious events</li>
           <li>Active participation in a sporting event (practices or warmups do not count)</li>
-          <li>Sleeping hours and you must be in your room. Your room does not protect you during waking hours.</li>
+          <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
           <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
           <li>A brodate where the hunter and target are in the same official brodate group. You can still be eliminated during a brodate if the hunter is not a part of the official brodate group. You can still be eliminated if you are in the same brodate group, just not during the brodate.</li>
