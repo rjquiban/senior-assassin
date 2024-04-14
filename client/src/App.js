@@ -96,7 +96,7 @@ function App() {
       <h1 class="text-center">Theta Tau Assassin</h1>
       <div>
         <p><u>Target Assignment</u></p>
-        <p id="signInText">Sign in to get your target.</p>
+        <p id="signInText">Sign in with your SCU account to get your target.</p>
         <div id="signInDiv"></div>
         { Object.keys(target).length !== 0 &&
           <div>

@@ -3,5 +3,17 @@ div {
 }
 
 .App {
-  padding: 2.5vh 20vw;
+  padding: 2.5vh 15vw;
+}
+
+@media screen and (max-width: 767.98px) {
+  .App {
+    padding: 2.5vh 10vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .App {
+    padding: 2.5vh 2.5vw;
+  }
 }
