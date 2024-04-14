@@ -16,7 +16,7 @@ img {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 620px) {
   .App {
     padding: 2.5vh 2.5vw;
   }
