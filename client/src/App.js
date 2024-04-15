@@ -162,7 +162,7 @@ function App() {
           <li>Class</li>
           <li>A course-related lab (Independent/undergraduate research does not protect you)</li>
           <li>Places of worship/religious events</li>
-          <li>Active participation in a sporting event (practices or warmups do not count)</li>
+          <li>Active participation in a sporting event or workout (you are not protected during water breaks, chatting between sets, scrolling on your phone between sets)</li>
           <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
           <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
@@ -177,6 +177,7 @@ function App() {
       </div>
       
       <div>
+        <br></br>
         <p><u>Deadlines</u></p>
         <p>You have deadlines to eliminate your target, otherwise you are eliminated. If you have not eliminated your first target by chapter after week 5 (May 5th), you are eliminated. If you have not eliminated your second target by chapter after week 7 (May 19th), you are eliminated. These are tentative dates and may be modified during the quarter depending on the pace of the game. Adequate warning will be given.</p>
       </div>
