@@ -39,15 +39,15 @@ function App() {
             return response.text();
           })
           .then(csvString => {
-            console.log("csv string: " + csvString);
+            // console.log("csv string: " + csvString);
     
             const lines = csvString.split('\n');
             const parsedData = lines.map(line => line.trim().split(','));
     
             const names = parsedData.map(row => row[0]);
             const emails = parsedData.map(row => row[1]);
-            console.log("names: " + names);
-            console.log("emails: " + emails);
+            // console.log("names: " + names);
+            // console.log("emails: " + emails);
 
             const userEmail = userObject.email;
             const target = getTarget(userEmail, names, emails);
