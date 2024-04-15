@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { jwtDecode } from "jwt-decode";
 import kill from "./assets/kill.png";
 import shield from "./assets/shield.png";
+import bigSpoon from "./assets/bigSpoon.png";
 
 const SEED = 1;
 
@@ -122,6 +123,9 @@ function App() {
           <li>
             Spoon kills: Tap your target with a spoon in order to get them out. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”. <b>This is a no witnesses kill</b>, meaning that neither your target nor anyone in the fraternity can witness the kill being made in order for it to count. Even if you are not participating in spoon assassin or you’ve gotten killed by an assassin, you can still serve as a witness. 
           </li>
+          <br></br>
+          <img className="image" src={bigSpoon}></img>
+          <p>e.g. King Bach using a spoon NOT up to regulations.</p>
           <li>
             Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you <b>cannot</b> be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. <b>This kill can have witnesses</b>.
           </li>
