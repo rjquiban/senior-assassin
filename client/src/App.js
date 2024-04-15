@@ -50,24 +50,34 @@ function App() {
             console.log("emails: " + emails);
 
             const userEmail = userObject.email;
-            const userIndex = emails.indexOf(userEmail);
-            
-            if (userIndex === -1) {
-              const target = {name: "no one! You're not in the game :P"};
-              setTarget(target);
-            } else {
-              const length = emails.length;
-              const targetIndex = (userIndex + SEED) % length;
-              const target = {name: names[targetIndex]};
-              setTarget(target);
-            }
-          
+            const target = getTarget(userEmail, names, emails);
+            setTarget(target);
+
             //const target = getTarget(userObject, names, emails);
+            // TESTING
+            // for (let i = 0; i < emails.length; i++) {
+            //   console.log(getTarget(emails[i], names, emails).name);
+            // }
           })
           .catch(error => {
             console.error('Error fetching or processing CSV:', error);
           });
       };
+
+      function getTarget(userEmail, names, emails) {
+        console.log("user: " + userEmail);
+        const userIndex = emails.indexOf(userEmail);
+        console.log("user index: " + userIndex);
+        if (userIndex === -1) {
+          const target = {name: "no one! You're not in the game :P"};
+          return target;
+        } else {
+          const length = emails.length;
+          const targetIndex = (userIndex + SEED) % length;
+          const target = {name: names[targetIndex]};
+          return target;
+        }
+      }
 
       // function getTarget(user, names, emails) {
       //   // shuffle roster, will always shuffle same
