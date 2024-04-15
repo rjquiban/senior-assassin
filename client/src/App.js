@@ -121,7 +121,7 @@ function App() {
         {/* <p>You have two ways to kill:</p> */}
         <ol>
           <li>
-            Spoon kills: Tap your target with a spoon in order to get them out. If your target is holding a spoon, the kill does not count. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”.
+            Spoon kills: Tap your target with a spoon in order to get them out. If your target is holding a spoon in their hand, the kill does not count. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”.
           </li>
           <br></br>
           <img className="image" src={bigSpoon}></img>
