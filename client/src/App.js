@@ -4,7 +4,7 @@ import kill from "./assets/kill.png";
 import shield from "./assets/shield.png";
 import bigSpoon from "./assets/bigSpoon.png";
 
-const SEED = 1;
+const SEED = 17;
 
 function App() {
   const [ user, setUser ] = useState({});
@@ -46,56 +46,67 @@ function App() {
     
             const names = parsedData.map(row => row[0]);
             const emails = parsedData.map(row => row[1]);
-    
             console.log("names: " + names);
             console.log("emails: " + emails);
+
+            const userEmail = userObject.email;
+            const userIndex = emails.indexOf(userEmail);
             
-            const target = getTarget(userObject, names, emails);
-    
-            setTarget(target);
+            if (userIndex === -1) {
+              const target = {name: "no one! You're not in the game :P"};
+              setTarget(target);
+            } else {
+              const length = emails.length;
+              const targetIndex = (userIndex + SEED) % length;
+              const target = {name: names[targetIndex]};
+              setTarget(target);
+            }
+          
+            //const target = getTarget(userObject, names, emails);
           })
           .catch(error => {
             console.error('Error fetching or processing CSV:', error);
           });
       };
 
-      function getTarget(user, names, emails) {
-        // shuffle roster, will always shuffle same
-        const shuffled = [...emails];
-        shuffleTargets(shuffled, SEED);
+      // function getTarget(user, names, emails) {
+      //   // shuffle roster, will always shuffle same
+      //   const shuffled = [...emails];
+      //   shuffleTargets(shuffled, SEED);
     
-        const email = user.email;
-        if (shuffled.indexOf(email) === -1) {
-          return {name: "no one! You're not in the game :P"};
-        }
+      //   const email = user.email;
+      //   if (shuffled.indexOf(email) === -1) {
+      //     return {name: "no one! You're not in the game :P"};
+      //   }
 
-        const targetIndex = (shuffled.indexOf(email) + 1) % shuffled.length;
-        const targetName = names[targetIndex];
-        console.log("target: " +  targetName);
-        return {name: targetName};
-      };
+      //   const targetIndex = (shuffled.indexOf(email) + 1) % shuffled.length;
+      //   const targetName = names[targetIndex];
+
+      //   console.log("target: " +  targetName);
+      //   return {name: targetName};
+      // };
     
-      function shuffleTargets(names, seed) {
-        let currentIndex = names.length;
+      // function shuffleTargets(names, seed) {
+      //   let currentIndex = names.length;
     
-        let random = function() {
-          var x = Math.sin(seed++) * 10000;
-          return x - Math.floor(x);
-        };
+      //   let random = function() {
+      //     var x = Math.sin(seed++) * 10000;
+      //     return x - Math.floor(x);
+      //   };
     
-        // while still elements to shuffle
-        while (0 !== currentIndex) {        
-            // choose random element and swap
-            let rand = Math.floor(random() * currentIndex);
-            currentIndex -= 1;
+      //   // while still elements to shuffle
+      //   while (0 !== currentIndex) {        
+      //       // choose random element and swap
+      //       let rand = Math.floor(random() * currentIndex);
+      //       currentIndex -= 1;
             
-            let temp = names[currentIndex];
-            names[currentIndex] = names[rand];
-            names[rand] = temp;
-        }
+      //       let temp = names[currentIndex];
+      //       names[currentIndex] = names[rand];
+      //       names[rand] = temp;
+      //   }
     
-        return names;
-      };
+      //   return names;
+      // };
   }, []);
 
   return (
