@@ -162,7 +162,7 @@ function App() {
           <li>Class</li>
           <li>A course-related lab (Independent/undergraduate research does not protect you)</li>
           <li>Places of worship/religious events</li>
-          <li>Active participation in a sporting event or workout (you are not protected during water breaks, chatting between sets, scrolling on your phone between sets)</li>
+          <li>Active participation in a sporting event, workout, or dance/cultural show practice (you are not protected during water breaks, chatting between sets, scrolling on your phone between sets)</li>
           <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
           <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
