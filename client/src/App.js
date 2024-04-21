@@ -55,9 +55,9 @@ function App() {
 
             //const target = getTarget(userObject, names, emails);
             // TESTING
-            // for (let i = 0; i < emails.length; i++) {
-            //   console.log(getTarget(emails[i], names, emails).name);
-            // }
+            for (let i = 0; i < emails.length; i++) {
+              console.log(getTarget(emails[i], names, emails).name);
+            }
           })
           .catch(error => {
             console.error('Error fetching or processing CSV:', error);
@@ -161,8 +161,10 @@ function App() {
         <ul>
           <li>Class</li>
           <li>A course-related lab (Independent/undergraduate research does not protect you)</li>
+          <li>Office Hours</li>
           <li>Places of worship/religious events</li>
           <li>Active participation in a sporting event, workout, or dance/cultural show practice (you are not protected during water breaks, chatting between sets, scrolling on your phone between sets)</li>
+          <li>Performances for dance/cultural show performers (spectators are not protected). This includes after the actual show during congratulations and photos.</li>
           <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
           <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
