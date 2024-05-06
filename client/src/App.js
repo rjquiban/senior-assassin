@@ -4,7 +4,7 @@ import kill from "./assets/kill.png";
 import shield from "./assets/shield.png";
 import bigSpoon from "./assets/bigSpoon.png";
 
-const SEED = 17;
+const SEED = 10;
 
 function App() {
   const [ user, setUser ] = useState({});
@@ -55,9 +55,9 @@ function App() {
 
             //const target = getTarget(userObject, names, emails);
             // TESTING
-            for (let i = 0; i < emails.length; i++) {
-              console.log(getTarget(emails[i], names, emails).name);
-            }
+            // for (let i = 0; i < emails.length; i++) {
+            //   console.log(getTarget(emails[i], names, emails).name);
+            // }
           })
           .catch(error => {
             console.error('Error fetching or processing CSV:', error);
@@ -78,45 +78,6 @@ function App() {
           return target;
         }
       }
-
-      // function getTarget(user, names, emails) {
-      //   // shuffle roster, will always shuffle same
-      //   const shuffled = [...emails];
-      //   shuffleTargets(shuffled, SEED);
-    
-      //   const email = user.email;
-      //   if (shuffled.indexOf(email) === -1) {
-      //     return {name: "no one! You're not in the game :P"};
-      //   }
-
-      //   const targetIndex = (shuffled.indexOf(email) + 1) % shuffled.length;
-      //   const targetName = names[targetIndex];
-
-      //   console.log("target: " +  targetName);
-      //   return {name: targetName};
-      // };
-    
-      // function shuffleTargets(names, seed) {
-      //   let currentIndex = names.length;
-    
-      //   let random = function() {
-      //     var x = Math.sin(seed++) * 10000;
-      //     return x - Math.floor(x);
-      //   };
-    
-      //   // while still elements to shuffle
-      //   while (0 !== currentIndex) {        
-      //       // choose random element and swap
-      //       let rand = Math.floor(random() * currentIndex);
-      //       currentIndex -= 1;
-            
-      //       let temp = names[currentIndex];
-      //       names[currentIndex] = names[rand];
-      //       names[rand] = temp;
-      //   }
-    
-      //   return names;
-      // };
   }, []);
 
   return (
@@ -139,7 +100,7 @@ function App() {
 
       <div>
         <p><u>Eliminations</u></p>
-        {/* <p>You have two ways to kill:</p> */}
+        <p>You have two ways to kill:</p>
         <ol>
           <li>
             Spoon kills: Tap your target with a spoon in order to get them out. If your target is holding a spoon in their hand, the kill does not count. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”.
@@ -148,9 +109,9 @@ function App() {
           <img className="image" src={bigSpoon}></img>
           <p>e.g. King Bach using a spoon NOT up to regulations.</p>
           
-          {/* <li>
-            Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you <b>cannot</b> be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. <b>This kill can have witnesses</b>.
-          </li> */}
+          <li>
+            Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you <b>cannot</b> be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. <b>Holding a spoon does not protect you from grenades</b>.
+          </li>
         </ol>
         <p>All kills will be made on the honor system.</p>
       </div>
