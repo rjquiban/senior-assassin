@@ -1,0 +1,23 @@
+div {
+  padding: 10px;
+}
+
+.App {
+  padding: 2.5vh 15vw;
+}
+
+img {
+  max-width: 200px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .App {
+    padding: 2.5vh 10vw;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .App {
+    padding: 2.5vh 2.5vw;
+  }
+}
