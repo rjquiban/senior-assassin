@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react';
 import { jwtDecode } from "jwt-decode";
-import kill from "./assets/kill.png";
-import shield from "./assets/shield.png";
-import bigSpoon from "./assets/bigSpoon.png";
-
 const SEED = 10;
 
 function App() {
@@ -83,8 +79,8 @@ function App() {
   return (
     <div className="App">
       <header className="d-flex flex-column justify-content-center align-items-center">
-        <h1 class="text-center">Theta Tau Spoon Assassin</h1>
-        <img className="image" src={shield}></img>
+        <h1 class="text-center">Senior Assassin</h1>
+        <h5 class="text-center">Website by Chris Tamayo (ty chris)</h5>
       </header>
       <div>
         <p><u>Target Assignment</u></p>
@@ -100,19 +96,9 @@ function App() {
 
       <div>
         <p><u>Eliminations</u></p>
-        <p>You have two ways to kill:</p>
-        <ol>
-          <li>
-            Spoon kills: Tap your target with a spoon in order to get them out. If your target is holding a spoon in their hand, the kill does not count. No throwing your spoon or using an abnormally large spoon. In other words, the spoon must be “regulation size”.
-          </li>
-          <br></br>
-          <img className="image" src={bigSpoon}></img>
-          <p>e.g. King Bach using a spoon NOT up to regulations.</p>
-          
-          <li>
-            Grenade kills: In order to kill your target with a grenade, you must roll/drop/throw a rolled up sock ball within a three feet radius of them and wait five seconds for it to explode. In order for the kill to count, when the grenade goes off you <b>cannot</b> be within a 3 foot radius of it. Targets can save themselves by getting more than three feet away from the sock ball before the five seconds are up. <b>Holding a spoon does not protect you from grenades</b>.
-          </li>
-        </ol>
+        <ul>
+          <li>Water gun kill: Shoot your target with water in order to get them out. If your target is <strong>wearing</strong> sunglasses, the kill does not count.</li>
+        </ul>
         <p>All kills will be made on the honor system.</p>
       </div>
 
@@ -128,21 +114,18 @@ function App() {
           <li>Performances for dance/cultural show performers (spectators are not protected). This includes after the actual show during congratulations and photos.</li>
           <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
-          <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
-          <li>A brodate where the hunter and target are in the same official brodate group. You can still be eliminated during a brodate if the hunter is not a part of the official brodate group. You can still be eliminated if you are in the same brodate group, just not during the brodate.</li>
         </ul>
       </div>
 
       <div>
         <p><u>What To Do After A Kill</u></p>
-        <p>After killing your target, send a dramatic picture of your kill to Chris Tamayo and he will post it in the slack. Ask your target for the name of your new target (their target now becomes your new one).</p>
-        <img className="image" src={kill}></img>
+        <p>After killing your target, send a dramatic picture of your kill to the TT Seniors group chat. Ask your target for the name of your new target (their target now becomes your new one).</p>
       </div>
       
       <div>
         <br></br>
-        <p><u>Deadlines</u></p>
-        <p>You have deadlines to eliminate your target, otherwise you are eliminated. If you have not eliminated your first target by chapter after week 5 (May 5th), you are eliminated. If you have not eliminated your second target by chapter after week 7 (May 19th), you are eliminated. These are tentative dates and may be modified during the quarter depending on the pace of the game. Adequate warning will be given.</p>
+        <p><u>Your Mission</u></p>
+        <p>Make your first kill <strong>by Sunday, May 19</strong></p>
       </div>
     </div>
   );
