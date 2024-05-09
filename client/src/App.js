@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
       /* global google */
       google.accounts.id.initialize({
-        client_id: "313177334063-gtgv18kpeomfa0rqe8rvhadcfe5kucvt.apps.googleusercontent.com",
+        client_id: "1094829626967-fv6qsha2o6f17kjaot01kf8qrphuac29.apps.googleusercontent.com",
         callback: handleCallbackResponse
       });
 
