@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { jwtDecode } from "jwt-decode";
-const SEED = 10;
+const SEED = 100;
 
 function App() {
   const [ user, setUser ] = useState({});
