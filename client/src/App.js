@@ -27,7 +27,7 @@ function App() {
         document.getElementById("signInDiv").hidden = true;
         document.getElementById("signInText").hidden = true;
 
-        fetch(process.env.PUBLIC_URL + '/roster.csv')
+        fetch(process.env.PUBLIC_URL + '/rosterShuffled.csv')
           .then(response => {
             if (!response.ok) {
               throw new Error('Failed to fetch CSV file');
