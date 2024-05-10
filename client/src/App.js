@@ -95,10 +95,16 @@ function App() {
       </div>
 
       <div>
+        <p><u>Winner Grand Prize</u></p>
+        <p>$36.17 (two drinks!)</p>
+      </div>
+
+      <div>
         <p><u>Eliminations</u></p>
         <ul>
           <li>Water gun kill: Shoot your target with water in order to get them out. If your target is <strong>wearing</strong> sunglasses, the kill does not count.</li>
         </ul>
+        <p>Use your discretion when making kills AKA <strong> please avoid hitting electronics </strong></p>
         <p>All kills will be made on the honor system.</p>
       </div>
 
@@ -106,6 +112,7 @@ function App() {
         <p><u>Safe Zones</u></p>
         <p>Kills cannot be made during:</p>
         <ul>
+          <li>Your house <strong>if you live with your target</strong></li>
           <li>Class</li>
           <li>A course-related lab (Independent/undergraduate research does not protect you)</li>
           <li>Office Hours</li>
@@ -114,6 +121,7 @@ function App() {
           <li>Performances for dance/cultural show performers (spectators are not protected). This includes after the actual show during congratulations and photos.</li>
           <li>Your bed when asleep / trying to sleep</li>
           <li>Places of work during work hours (for CFs this is only when you’re on rounds/at the desk/dealing with some crisis)</li>
+          <li>Official theta tau events (tabling is fine as long as the person isn’t actively helping someone)</li>
         </ul>
       </div>
 
